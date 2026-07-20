@@ -1,6 +1,7 @@
 # Connect IQ Build Outputs
 bin/
 gen/
+build/
 *.prg
 *.iq
 
