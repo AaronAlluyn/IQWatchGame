@@ -4,12 +4,28 @@ A 360-degree precision action roguelite designed exclusively for **Garmin Connec
 
 The game centers around a rotating needle spinning around a 360° circular track. Gameplay relies on timing single taps when the spinning indicator aligns with target arcs on the watch face.
 
+<p align="center">
+  <img src="example/menu.png" width="200" title="Main Menu" alt="Main Menu" />
+  &nbsp;&nbsp;
+  <img src="example/enemy_fight.png" width="200" title="Combat Encounter" alt="Combat Encounter" />
+</p>
+
+---
+
+## Combat & Encounter Mechanics
+
 ### Combat Bars
 
 * **Player Action Bars**: Target arcs tapped to execute player attacks to deal damage to enemies and build combo streaks.
 * **Enemy Action Bars**: Target arcs tapped to parry or block incoming enemy attacks, mitigating damage and triggering passive relic counters.
 * **Click-Trigger Modifier Bars**: Reactive hazard arcs that trigger instant game mechanics upon being clicked (such as reversing indicator spin direction, triggering speed surges, or resetting combos).
 * **Passive Overlap Zones**: Environmental arcs that apply effects continuously whenever the indicator needle passes over them without requiring a tap (such as quicksand zones that slow indicator speed).
+
+<p align="center">
+  <img src="example/enemy_info.png" width="220" title="Enemy Preview Card" alt="Enemy Preview Card" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="example/boss_intro.png" width="220" title="Boss Intro Card" alt="Boss Intro Card" />
+</p>
 
 ### Boss Fight Features
 Boss encounters introduce multi-phase mechanics:
@@ -41,6 +57,10 @@ The shop pool features replenishing consumable and permanent stat upgrades:
 * **Heal 4 HP**: Restores 4 HP.
 * **+2 Max HP**: Permanently increases maximum player HP capacity by 2 HP.
 
+<p align="center">
+  <img src="example/shop.png" width="240" title="Merchant Shop Node" alt="Merchant Shop Node" />
+</p>
+
 ### Minigames & Reward Tiers
 Minigames offer skill-based challenges outside of standard combat:
 * **Vault Lockpicker**: A 3-stage tumbler timing challenge requiring precise hits on shrinking target arcs with limited pick attempts.
@@ -69,11 +89,12 @@ The game automatically persists active run states and lifetime metrics to smartw
 * **State Machine Pattern**: Clean separation of game flow states (Menu, Combat, Shop, Minigames, Results, Death, Records) managed by a central state router.
 * **Decoupled Engine Core**: Radial physics, polar collision detection, object pooling, and animation tweening operate independently of game rules.
 * **Zero-Allocation Object Pool**: Reuses fixed arrays of radial target bars to eliminate garbage collection pauses on resource-constrained watch hardware.
-* **Unified UI Utilities**: Centralized UI components to minimise code duplication and help keep design lanuage consistent.
+* **Unified UI Utilities**: Centralized UI components to minimise code duplication and help keep design language consistent.
 * **Adding New Enemies & Movesets**: Defined entirely through data profiles specifying movement speeds, bar widths, shrink rates, moveset colors, and phase transitions.
 * **Adding New Minigames**: Plug-and-play architecture allows new minigame states to be registered directly into the modular minigame router pool.
 * **Adding New Relics & Shop Items**: Event-driven relic hooks allow new passive items to register handlers for combat events (onHit, onBlock, onDamage) without altering combat loop logic.
 
+---
 
 ## Supported Devices
 
