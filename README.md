@@ -1,16 +1,12 @@
 # Radial Rogue
 
-A 360-degree precision action roguelite designed exclusively for **Garmin Connect IQ smartwatches**, built in Monkey C.
-
-The game centers around a rotating needle spinning around a 360° circular track. Gameplay relies on timing single taps when the spinning indicator aligns with target arcs on the watch face.
+A 360-degree reflex roguelite for **Garmin Connect IQ smartwatches**, centered around a rotating needle spinning around a 360° circular track. Gameplay relies on timing single taps when the spinning indicator aligns with target arcs on the watch face.
 
 <p align="center">
   <img src="example/menu.png" width="200" title="Main Menu" alt="Main Menu" />
   &nbsp;&nbsp;
   <img src="example/enemy_fight.png" width="200" title="Combat Encounter" alt="Combat Encounter" />
 </p>
-
----
 
 ## Combat & Encounter Mechanics
 
