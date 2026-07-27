@@ -16,13 +16,10 @@ class IQWatchGameApp extends Application.AppBase {
     function onStop(state as Dictionary?) as Void {
     }
 
-    // Return the initial view of your application here
-    function getInitialView() as [Views] or [Views, InputDelegates] {
-        return [ new IQWatchGameView(), new IQWatchGameDelegate() ];
+    // Return the initial view of your application here.
+    // The return type must be an Array of a View and an InputDelegate.
+    public function getInitialView() as [ WatchUi.Views ] or [ WatchUi.Views, WatchUi.InputDelegates ]  {
+        var view = new IQWatchGameView();
+        return [view, new IQWatchGameDelegate(view)];
     }
-
-}
-
-function getApp() as IQWatchGameApp {
-    return Application.getApp() as IQWatchGameApp;
 }
